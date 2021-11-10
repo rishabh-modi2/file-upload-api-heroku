@@ -143,7 +143,6 @@ res.sendFile(__dirname+"/upload/" + result[0].videoName);
   }
 })
 
-
 app.get("/pic/:id", async (req,res) => {
   try{
 const userId = req.params.id;
@@ -154,6 +153,7 @@ res.sendFile(__dirname+"/upload/" + result[0].posterName);
     res.json({message:"internel problem"})
   }
 })
+
 
 
 app.listen(PORT,() => {
