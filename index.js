@@ -144,6 +144,17 @@ res.sendFile(__dirname+"/upload/" + result[0].videoName);
 })
 
 
+app.get("/pic/:id", async (req,res) => {
+  try{
+const userId = req.params.id;
+  const result = await Model.find({_id:userId});
+res.sendFile(__dirname+"/upload/" + result[0].posterName);
+  }
+  catch(err){
+    res.json({message:"internel problem"})
+  }
+})
+
 
 app.listen(PORT,() => {
     console.log("server is started on port number");
