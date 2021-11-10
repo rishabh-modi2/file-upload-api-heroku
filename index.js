@@ -68,7 +68,7 @@ const userData = new Model({
       des:desName
     })
 const result = await userData.save();
-    res.send(result);
+    res.send("file uploaded");
          
        }
      })
