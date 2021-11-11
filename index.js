@@ -108,7 +108,7 @@ const result = await Model.find({_id:userId});
     res.json({message:"please set range header"});
   }
   else{
-const videoPath = "./upload/"+ result[0].videofileName;
+const videoPath = "./upload/"+ result[0].fileName;
     console.log(videoPath)
  const videoSize = fs.statSync(videoPath).size;
 const CHANK_SIZE = 10**6;
