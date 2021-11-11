@@ -65,7 +65,7 @@ res.json({message:"something went wrong please try again later"});
 const userData = new Model({
       videoName:`/source/${videopath.name}`,
       posterName:`/source/${posterpath.name}`,
-      videofileName: videopath,
+      fileName: videopath,
       title:titleName,
       des:desName
     })
