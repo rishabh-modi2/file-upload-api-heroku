@@ -43,6 +43,7 @@ const videoSchema = new mongoose.Schema({
   description:String,
   thumbnail:String,
   video:String,
+  Type:String,
   date:{
     type:Date,
     default:Date.now
@@ -90,7 +91,8 @@ app.post("/api/upload", async (req,res) => {
                   title:title,
                   description:description,
                   thumbnail:resutlofimage.secure_url,
-                  video:resultofvideo.secure_url
+                  video:resultofvideo.secure_url,
+                  Type:videopath.type
                 })
                 const result = await newVideo.save();
             res.json({
